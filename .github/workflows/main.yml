@@ -22,7 +22,7 @@ jobs:
           java-version: '11'
 
       - name: Install Flutter
-        uses: subosito/flutter-action@v4
+        uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.27.3' # Specify the Flutter version you want to use
 
