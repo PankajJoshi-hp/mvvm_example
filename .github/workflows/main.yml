@@ -22,7 +22,7 @@ jobs:
           java-version: '11'
 
       - name: Install Flutter
-        uses: subosito/flutter-action@v2
+        uses: subosito/flutter-action@v4
         with:
           flutter-version: '3.27.3' # Specify the Flutter version you want to use
 
@@ -35,8 +35,11 @@ jobs:
       - name: Build APK
         run: flutter build apk --release
 
-      - name: Upload APK
-        uses: actions/upload-artifact@v2
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
         with:
-          name: marvel_api_flutter
-          path: build/app/outputs/flutter-apk/app-release.apk
+          name: Releases
+          path: |
+            build/app/outputs/flutter-apk/app-release.apk
+            build/app/outputs/bundle/release/app-release.aab
+            build/ios_build.tar.gz

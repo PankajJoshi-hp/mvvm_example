@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:marvel_api_flutter/components/books_view.dart';
 import 'package:marvel_api_flutter/components/superhero_view.dart';
 import 'package:marvel_api_flutter/controllers/book_controller.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key, required this.controller});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
         title: 'Marvel API Demo',
         theme: ThemeData(
           primarySwatch: Colors.blue,
